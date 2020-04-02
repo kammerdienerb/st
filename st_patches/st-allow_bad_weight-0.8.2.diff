@@ -1,0 +1,12 @@
+diff -up st2/x.c st-0.8.2/x.c
+--- st2/x.c	2020-01-31 14:24:43.444640800 -0500
++++ st-0.8.2/x.c	2019-02-09 06:50:41.000000000 -0500
+@@ -881,7 +881,7 @@ xloadfont(Font *f, FcPattern *pattern)
+ 	    XftResultMatch)) {
+ 		if ((XftPatternGetInteger(f->match->pattern, "weight", 0,
+ 		    &haveattr) != XftResultMatch) || haveattr != wantattr) {
+-/* 			f->badweight = 1; */
++			f->badweight = 1;
+ 			fputs("font weight does not match\n", stderr);
+ 		}
+ 	}
